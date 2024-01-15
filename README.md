@@ -16,6 +16,7 @@ To run tisem with minimap2 use following command
 To run tisem with bbuk use following command
 
  `./tisem -m bbduk -f ./target_gene.fasta -1 ./forward_1.fq -2 ./reverse_2.fq -o ./outdir`
+
 Default bbduk parameters: K=19, hdist=0, you could change in in command if you wish, for example:
 
  `./tisem -m bbduk -f ./target_gene.fasta -1 ./forward_1.fq -2 ./reverse_2.fq -o ./outdir -k 23 -hdist 2`
