@@ -24,10 +24,10 @@ Default bbduk parameters: K=19, hdist=0, you could change in in command if you w
 Other parameters could be changed directly in `/workflow/rules/*.smk` rules files
 
 # Output folders
-`{outdir}/bbduk` - results of bbduk run, target reads inside
-`{outdir}/minimap2` - results of minimap2, target alignment and extracted properly paired reads inside
-`{outdir}/assembly` - results of SPAdes run, file `{prefix}_target.fasta` is resulted scaffolds file
-`{outdir}/blast` - results of blast run in outfmt6 format + db folder 
+* `{outdir}/bbduk` - results of bbduk run, target reads inside
+* `{outdir}/minimap2` - results of minimap2, target alignment and extracted properly paired reads inside
+* `{outdir}/assembly` - results of SPAdes run, file `{prefix}_target.fasta` is resulted scaffolds file
+* `{outdir}/blast` - results of blast run in outfmt6 format + db folder 
  
 # Command line arguments
 ```
