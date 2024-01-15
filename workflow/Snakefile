@@ -12,7 +12,7 @@ PREFIX = config["prefix"]
 ## provide here final pipeline outputs, without intermediates 
 rule all:
     input:
-        target_assembly = f"{OUTDIR}/assembly/{PREFIX}_target.fasta",
+        target_blast = f"{OUTDIR}/blast/{PREFIX}.outfmt6",
 
 ## list here all environments
 rule envs:
@@ -20,6 +20,7 @@ rule envs:
         minimap2 = "../envs/minimap2.yaml",
         spades = "../envs/spades.yaml",
         bbduk = "../envs/bbduk.yaml",
+        blast = "../envs/blast.yaml"
 
 envs = rules.envs.input 
 
@@ -33,3 +34,5 @@ elif MODE == "bbduk":
     TARGET_RR = rules.bbduk.output.target_rr
 
 include: "./rules/spades.smk"
+
+include: "./rules/blast.smk"
